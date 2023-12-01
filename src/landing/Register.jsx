@@ -3,6 +3,7 @@ import axios from 'axios';
 import entradaSJ from '../assets/entrada_sj.jpg';
 import uchatLogo from '../assets/uchat_logo.png';
 import {AuthContext} from '../auth/AuthContext';
+import API_URL from '../config';
 
 export default function Register({openLogin}) {
   const [nombre, setNombre] = useState('');
@@ -19,7 +20,7 @@ export default function Register({openLogin}) {
     console.log(email);
     console.log(password);
     console.log('Ingresaste Register');
-    axios.post(`${import.meta.env.VITE_BACKEND_URL}/signup`, {
+    axios.post(`${API_URL}/signup`, {
       nombre,
       email,
       password,

@@ -2,6 +2,7 @@ import {useState, useEffect, useContext} from 'react';
 import axios from 'axios';
 import {AuthContext} from '../auth/AuthContext';
 import './protected.css';
+import API_URL from '../config';
 
 function Check() {
   // ejemplo capsula: Hacen post a localhost/scope-example/protecteduser
@@ -10,7 +11,7 @@ function Check() {
 
   const config = {
     method: 'get',
-    url: `${import.meta.env.VITE_BACKEND_URL}/usuarios` || '',
+    url: `${API_URL}/usuarios` || '',
     headers: {
       Authorization: `Bearer ${token}`,
     },

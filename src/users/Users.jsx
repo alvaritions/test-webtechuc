@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, {useState, useEffect, useContext} from 'react';
 import {AuthContext} from '../auth/AuthContext';
+import API_URL from '../config';
 
 export default function Users() {
   const [users, setUsers] = useState([]);
@@ -9,7 +10,7 @@ export default function Users() {
 
   const config_users = {
     method: 'get',
-    url: `${import.meta.env.VITE_BACKEND_URL}/usuarios` || '',
+    url: `${API_URL}/usuarios` || '',
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -18,7 +19,7 @@ export default function Users() {
   const deleteUser = (id) => () => {
     const config_delete = {
       method: 'delete',
-      url: `${import.meta.env.VITE_BACKEND_URL}/usuarios/${id}` || '',
+      url: `${API_URL}/usuarios/${id}` || '',
       headers: {
         Authorization: `Bearer ${token}`,
       },

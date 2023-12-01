@@ -2,6 +2,7 @@ import React, {useState, useContext} from 'react';
 import axios from 'axios';
 import uchatLogo from '../assets/uchat_logo.png';
 import {AuthContext} from '../auth/AuthContext';
+import API_URL from '../config';
 
 export default function Login({openRegister}) {
   const [email, setEmail] = useState('');
@@ -14,7 +15,7 @@ export default function Login({openRegister}) {
     event.preventDefault();
 
     axios
-      .post(`${import.meta.env.VITE_BACKEND_URL}/login`, {
+      .post(`${API_URL}/login`, {
         email,
         password,
       })

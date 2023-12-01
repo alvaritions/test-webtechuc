@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, {useState, useEffect, useContext} from 'react';
 import {AuthContext} from '../auth/AuthContext';
+import API_URL from '../config';
 
 export default function Cursos() {
   const [cursos, setCursos] = useState([]);
@@ -14,7 +15,7 @@ export default function Cursos() {
 
   const config_cursos = {
     method: 'get',
-    url: `${import.meta.env.VITE_BACKEND_URL}/cursos` || '',
+    url: `${API_URL}/cursos` || '',
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -23,7 +24,7 @@ export default function Cursos() {
   const deleteCurso = (id) => () => {
     const config_delete = {
       method: 'delete',
-      url: `${import.meta.env.VITE_BACKEND_URL}/cursos/${id}` || '',
+      url: `${API_URL}/cursos/${id}` || '',
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -44,7 +45,7 @@ export default function Cursos() {
     event.preventDefault();
 
     axios
-      .post(`${import.meta.env.VITE_BACKEND_URL}/cursos`, {
+      .post(`${API_URL}/cursos`, {
         nrc,
         nombre,
         sigla,
