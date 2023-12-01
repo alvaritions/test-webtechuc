@@ -2,7 +2,6 @@ import React, {useState, useContext} from 'react';
 import './Login.css';
 import axios from 'axios';
 import {AuthContext} from '../auth/AuthContext';
-import API_URL from '../config';
 
 export default function Login() {
   const [
@@ -26,7 +25,7 @@ export default function Login() {
     event.preventDefault();
 
     console.log('Ingresaste a form');
-    axios.post(`${API_URL}/login`, {
+    axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, {
       email,
       password,
     }).then((response) => {
