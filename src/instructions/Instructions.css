@@ -1,0 +1,23 @@
+.instructions-box {
+    position: absolute;
+    top: 100px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-around;
+    /* width: fit-content; */
+    background-color: rgb(36, 34, 34);
+}
+  
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+.instructions-box p {
+    color: white;
+}

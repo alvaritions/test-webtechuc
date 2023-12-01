@@ -1,0 +1,54 @@
+
+.post{
+    transition: 0.5s; /*e.c. de transicion*/
+    border-radius: 15px;
+    max-width: 600px;
+
+    margin: 20px;
+    background-color: lightblue;
+    padding: 10px;
+}
+
+.question{
+    background-color: white;
+    font: caption;
+    padding: 5px;
+    margin: 1px;
+    text-align: justify;
+}
+
+.question p{
+    color: black;
+}
+
+.comments{
+    background-color: white;
+    font: caption;
+    padding: 5px;
+    margin: 1px;
+    text-align: justify;
+}
+
+.comments p{
+    color: black;
+}
+
+.like-button{
+    background-color: rgb(30, 30, 84);
+    font: caption;
+    padding: 25px;
+    margin: 1px;
+    text-align: justify;
+    color: white;
+}
+
+.like-button p{
+    color: white;
+}
+
+.post img{
+    float: left;
+    width:  100px;
+    height: 100px;
+    object-fit: cover;
+}
